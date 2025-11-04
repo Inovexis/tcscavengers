@@ -56,6 +56,16 @@ export default function HomePage() {
             grid-template-columns: repeat(3, 1fr) !important;
           }
         }
+        .what-drives-us-grid {
+          grid-template-columns: 1fr !important;
+          grid-template-rows: repeat(4, 1fr) !important;
+        }
+        @media (min-width: 800px) {
+          .what-drives-us-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(2, 1fr) !important;
+          }
+        }
       `}} />
       {/* Consistent Cinematic Background for Entire Page */}
       <div style={{
@@ -587,7 +597,7 @@ export default function HomePage() {
               padding: '0 2rem'
             }}>
               {/* Values Content - Grid Layout - 2x2 Grid */}
-              <div style={{
+              <div className="what-drives-us-grid" style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(2, 1fr)',
                 gridTemplateRows: 'repeat(2, 1fr)',
@@ -598,6 +608,7 @@ export default function HomePage() {
                 width: '100%',
                 position: 'relative',
                 zIndex: 10,
+                alignItems: 'stretch'
               }}>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -607,6 +618,7 @@ export default function HomePage() {
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
+                      justifyContent: 'flex-start',
                       gap: '1.5rem',
                       padding: 'clamp(1.5rem, 2.5vw, 2rem)',
                       background: 'linear-gradient(135deg, rgba(255, 106, 74, 0.15), rgba(255, 106, 74, 0.08))',
@@ -616,6 +628,7 @@ export default function HomePage() {
                       transition: 'all 0.3s ease',
                       boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
                       textAlign: 'center',
+                      height: '100%'
                     }}
                     whileHover={{
                       scale: 1.02,
@@ -639,14 +652,30 @@ export default function HomePage() {
                     }}>
                       <HeartHandshake size={28} color="#FF6A4A" />
                     </div>
-                    <div style={{ flex: 1, textAlign: 'center' }}>
+                    <div style={{ 
+                      flex: 1, 
+                      textAlign: 'center',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-start',
+                      alignItems: 'center',
+                      width: '100%',
+                      minHeight: 0
+                    }}>
                       <h3 style={{
                         fontSize: '1.4rem',
                         fontWeight: 'bold',
                         color: 'white',
                         marginBottom: '0.5rem',
+                        marginTop: 0,
                         textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
-                        cursor: 'default'
+                        cursor: 'default',
+                        textAlign: 'center',
+                        width: '100%',
+                        overflowWrap: 'normal',
+                        wordBreak: 'normal',
+                        hyphens: 'none',
+                        lineHeight: 1.3
                       }}>
                         Love in Action
                       </h3>
@@ -654,9 +683,14 @@ export default function HomePage() {
                         color: 'rgba(255, 255, 255, 0.9)',
                         lineHeight: 1.5,
                         fontSize: '0.95rem',
-                  margin: 0,
-                  cursor: 'default'
-                }}>
+                        margin: 0,
+                        cursor: 'default',
+                        textAlign: 'center',
+                        width: '100%',
+                        overflowWrap: 'normal',
+                        wordBreak: 'normal',
+                        hyphens: 'none'
+                      }}>
                         Kindness is at the heart of everything we do, turning simple moments into lasting memories across our community.
                       </p>
                     </div>
@@ -670,6 +704,7 @@ export default function HomePage() {
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
+                      justifyContent: 'flex-start',
                       gap: '1.5rem',
                       padding: 'clamp(1.5rem, 2.5vw, 2rem)',
                       background: 'linear-gradient(135deg, rgba(16, 182, 198, 0.15), rgba(16, 182, 198, 0.08))',
@@ -679,6 +714,7 @@ export default function HomePage() {
                       transition: 'all 0.3s ease',
                       boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
                       textAlign: 'center',
+                      height: '100%'
                     }}
                     whileHover={{
                       scale: 1.02,
@@ -702,14 +738,30 @@ export default function HomePage() {
                     }}>
                       <Users2 size={28} color="#10B6C6" />
                     </div>
-                    <div style={{ flex: 1, textAlign: 'center' }}>
+                    <div style={{ 
+                      flex: 1, 
+                      textAlign: 'center',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-start',
+                      alignItems: 'center',
+                      width: '100%',
+                      minHeight: 0
+                    }}>
                       <h3 style={{
                         fontSize: '1.4rem',
                         fontWeight: 'bold',
                         color: 'white',
                         marginBottom: '0.5rem',
+                        marginTop: 0,
                         textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
-                        cursor: 'default'
+                        cursor: 'default',
+                        textAlign: 'center',
+                        width: '100%',
+                        overflowWrap: 'normal',
+                        wordBreak: 'normal',
+                        hyphens: 'none',
+                        lineHeight: 1.3
                       }}>
                         Community Over Everything
                       </h3>
@@ -717,9 +769,14 @@ export default function HomePage() {
                         color: 'rgba(255, 255, 255, 0.9)',
                         lineHeight: 1.5,
                         fontSize: '0.95rem',
-                  margin: 0,
-                  cursor: 'default'
-                }}>
+                        margin: 0,
+                        cursor: 'default',
+                        textAlign: 'center',
+                        width: '100%',
+                        overflowWrap: 'normal',
+                        wordBreak: 'normal',
+                        hyphens: 'none'
+                      }}>
                         We bring people together through adventure, connection, and shared pride in the Treasure Coast.
                       </p>
                     </div>
@@ -732,6 +789,7 @@ export default function HomePage() {
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
+                      justifyContent: 'flex-start',
                       gap: '1.5rem',
                       padding: 'clamp(1.5rem, 2.5vw, 2rem)',
                       background: 'linear-gradient(135deg, rgba(253, 186, 45, 0.15), rgba(253, 186, 45, 0.08))',
@@ -741,6 +799,7 @@ export default function HomePage() {
                       transition: 'all 0.3s ease',
                       boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
                       textAlign: 'center',
+                      height: '100%'
                     }}
                     whileHover={{
                       scale: 1.02,
@@ -764,14 +823,30 @@ export default function HomePage() {
                     }}>
                       <Sparkles size={28} color="#FDBA2D" />
                     </div>
-                    <div style={{ flex: 1, textAlign: 'center' }}>
+                    <div style={{ 
+                      flex: 1, 
+                      textAlign: 'center',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-start',
+                      alignItems: 'center',
+                      width: '100%',
+                      minHeight: 0
+                    }}>
                       <h3 style={{
                         fontSize: '1.4rem',
                         fontWeight: 'bold',
                         color: 'white',
                         marginBottom: '0.5rem',
+                        marginTop: 0,
                         textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
-                        cursor: 'default'
+                        cursor: 'default',
+                        textAlign: 'center',
+                        width: '100%',
+                        overflowWrap: 'normal',
+                        wordBreak: 'normal',
+                        hyphens: 'none',
+                        lineHeight: 1.3
                       }}>
                         Joy in the Journey
                       </h3>
@@ -779,9 +854,14 @@ export default function HomePage() {
                         color: 'rgba(255, 255, 255, 0.9)',
                         lineHeight: 1.5,
                         fontSize: '0.95rem',
-                  margin: 0,
-                  cursor: 'default'
-                }}>
+                        margin: 0,
+                        cursor: 'default',
+                        textAlign: 'center',
+                        width: '100%',
+                        overflowWrap: 'normal',
+                        wordBreak: 'normal',
+                        hyphens: 'none'
+                      }}>
                         Every adventure is an opportunity to laugh, explore, and celebrate the joy of being together.
                       </p>
                     </div>
@@ -795,20 +875,22 @@ export default function HomePage() {
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
+                      justifyContent: 'flex-start',
                       gap: '1.5rem',
                       padding: 'clamp(1.5rem, 2.5vw, 2rem)',
-                      background: 'linear-gradient(135deg, rgba(16, 182, 198, 0.15), rgba(16, 182, 198, 0.08))',
+                      background: 'linear-gradient(135deg, rgba(255, 133, 51, 0.15), rgba(255, 133, 51, 0.08))',
                       borderRadius: '20px',
                       border: '1px solid rgba(255, 255, 255, 0.15)',
                       boxSizing: 'border-box',
                       transition: 'all 0.3s ease',
                       boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
                       textAlign: 'center',
+                      height: '100%'
                     }}
                     whileHover={{
                       scale: 1.02,
                       y: -2,
-                      background: 'linear-gradient(135deg, rgba(16, 182, 198, 0.2), rgba(16, 182, 198, 0.12))',
+                      background: 'linear-gradient(135deg, rgba(255, 133, 51, 0.2), rgba(255, 133, 51, 0.12))',
                       borderColor: 'rgba(255, 255, 255, 0.25)',
                       boxShadow: '0 12px 35px rgba(0, 0, 0, 0.15)'
                     }}
@@ -822,19 +904,35 @@ export default function HomePage() {
                       width: '60px',
                       height: '60px',
                       borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #10B6C620, #10B6C610)',
-                      border: '2px solid #10B6C630'
+                      background: 'linear-gradient(135deg, #FF853320, #FF853310)',
+                      border: '2px solid #FF853330'
                     }}>
-                      <MapPin size={28} color="#10B6C6" />
+                      <MapPin size={28} color="#FF8533" />
                     </div>
-                    <div style={{ flex: 1, textAlign: 'center' }}>
+                    <div style={{ 
+                      flex: 1, 
+                      textAlign: 'center',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'flex-start',
+                      alignItems: 'center',
+                      width: '100%',
+                      minHeight: 0
+                    }}>
                       <h3 style={{
                         fontSize: '1.4rem',
                         fontWeight: 'bold',
                         color: 'white',
                         marginBottom: '0.5rem',
+                        marginTop: 0,
                         textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
-                        cursor: 'default'
+                        cursor: 'default',
+                        textAlign: 'center',
+                        width: '100%',
+                        overflowWrap: 'normal',
+                        wordBreak: 'normal',
+                        hyphens: 'none',
+                        lineHeight: 1.3
                       }}>
                         Local Roots, Lasting Impact
                       </h3>
@@ -842,10 +940,15 @@ export default function HomePage() {
                         color: 'rgba(255, 255, 255, 0.9)',
                         lineHeight: 1.5,
                         fontSize: '0.95rem',
-                  margin: 0,
-                  cursor: 'default'
+                        margin: 0,
+                        cursor: 'default',
+                        textAlign: 'center',
+                        width: '100%',
+                        overflowWrap: 'normal',
+                        wordBreak: 'normal',
+                        hyphens: 'none'
                       }}>
-                        Our events honor the people and places that make the Treasure Coast shine — building a legacy of connection and care.
+                        Our events honor the people and places that make the Treasure Coast shine, building a legacy of connection and care.
                       </p>
                     </div>
                   </motion.div>
