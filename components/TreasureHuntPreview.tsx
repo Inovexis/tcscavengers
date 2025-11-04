@@ -391,3 +391,4 @@ export default function TreasureHuntPreview({ className = '' }: TreasureHuntPrev
     </section>
   );
 }
+export default TreasureHuntPreview;

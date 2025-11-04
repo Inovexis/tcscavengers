@@ -687,25 +687,25 @@ export default function AboutPage() {
                     flex: 1,
                     textAlign: 'center'
                   }}>
-                    <h3 style={{
+                  <h3 style={{
                       fontSize: '1.4rem',
-                      fontWeight: 'bold',
-                      color: 'white',
+                    fontWeight: 'bold',
+                    color: 'white',
                       marginBottom: '1rem',
                       textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
                       cursor: 'default'
-                    }}>
-                      {value.title}
-                    </h3>
-                    
-                    <p style={{
-                      color: 'rgba(255, 255, 255, 0.8)',
-                      lineHeight: 1.6,
+                  }}>
+                    {value.title}
+                  </h3>
+                  
+                  <p style={{
+                    color: 'rgba(255, 255, 255, 0.8)',
+                    lineHeight: 1.6,
                       fontSize: '1rem',
                       cursor: 'default'
-                    }}>
-                      {value.description}
-                    </p>
+                  }}>
+                    {value.description}
+                  </p>
                   </div>
                 </motion.div>
               ))}
