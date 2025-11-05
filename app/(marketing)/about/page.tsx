@@ -959,7 +959,7 @@ export default function AboutPage() {
           style={{
             position: 'relative',
             zIndex: 2,
-            padding: '3rem 0',
+            padding: '1.5rem 0',
             width: '100%',
             display: 'flex',
             justifyContent: 'center'
@@ -970,43 +970,53 @@ export default function AboutPage() {
             backdropFilter: 'blur(20px)',
             border: '1px solid rgba(255, 255, 255, 0.15)',
             borderRadius: '16px',
-            padding: '2rem 3rem',
+            padding: '1rem 3rem',
             maxWidth: '900px',
             width: '90%',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
           }}>
-            {/* Legal Information - truly centered */}
-            <div style={{ position: 'relative', textAlign: 'center' }}>
-              <p style={{
-                color: 'rgba(255, 255, 255, 0.9)',
-                fontSize: '0.875rem',
-                margin: '0 0 0.5rem 0',
-                lineHeight: 1.4,
-                fontWeight: '500',
-                cursor: 'default'
+            {/* Legal Information with Social Links */}
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              alignItems: 'center',
+              gap: '2rem',
+              flexWrap: 'wrap'
+            }}>
+              {/* Centered Text */}
+              <div style={{ 
+                flex: '1', 
+                textAlign: 'center',
+                minWidth: '200px'
               }}>
-                Treasure Coast Scavengers Inc. is a 501(c)(3) nonprofit organization.
-              </p>
-              <p style={{
-                color: 'rgba(255, 255, 255, 0.7)',
-                fontSize: '0.75rem',
-                margin: 0,
-                lineHeight: 1.3,
-                cursor: 'default'
-              }}>
-                © 2025 Treasure Coast Scavengers Inc. All rights reserved.
-              </p>
+                <p style={{
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  fontSize: '0.875rem',
+                  margin: '0 0 0.25rem 0',
+                  lineHeight: 1.4,
+                  fontWeight: '500',
+                  cursor: 'default'
+                }}>
+                  Treasure Coast Scavengers Inc. is a nonprofit organization with 501(c)(3) status pending IRS approval.
+                </p>
+                <p style={{
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  fontSize: '0.75rem',
+                  margin: 0,
+                  lineHeight: 1.3,
+                  cursor: 'default'
+                }}>
+                  © 2025 Treasure Coast Scavengers Inc. All rights reserved.
+                </p>
+              </div>
 
-              {/* Social Media Follow - positioned absolutely */}
+              {/* Social Media Follow */}
               <div style={{
-                position: 'absolute',
-                top: '50%',
-                right: '0',
-                transform: 'translateY(-50%)',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '0.5rem',
-                alignItems: 'flex-end'
+                alignItems: 'flex-end',
+                flexShrink: 0
               }}>
                 {/* Instagram Follow */}
                 <motion.a

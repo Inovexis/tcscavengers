@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart, Users, ArrowRight } from 'lucide-react';
+import { Heart, Users, ArrowRight, Instagram } from 'lucide-react';
 import Link from 'next/link';
 // ResponsiveNav is handled in the root layout
 
@@ -325,6 +325,129 @@ export default function DonatePage() {
           </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+        style={{
+          position: 'relative',
+          zIndex: 2,
+          padding: '1.5rem 0',
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center'
+        }}
+      >
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.08)',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255, 255, 255, 0.15)',
+          borderRadius: '16px',
+          padding: '1rem 3rem',
+          maxWidth: '900px',
+          width: '90%',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
+        }}>
+          {/* Legal Information with Social Links */}
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            gap: '2rem',
+            flexWrap: 'wrap'
+          }}>
+            {/* Centered Text */}
+            <div style={{ 
+              flex: '1', 
+              textAlign: 'center',
+              minWidth: '200px'
+            }}>
+              <p style={{
+                color: 'rgba(255, 255, 255, 0.9)',
+                fontSize: '0.875rem',
+                margin: '0 0 0.25rem 0',
+                lineHeight: 1.4,
+                fontWeight: '500',
+                cursor: 'default'
+              }}>
+                Treasure Coast Scavengers Inc. is a nonprofit organization with 501(c)(3) status pending IRS approval.
+              </p>
+              <p style={{
+                color: 'rgba(255, 255, 255, 0.7)',
+                fontSize: '0.75rem',
+                margin: 0,
+                lineHeight: 1.3,
+                cursor: 'default'
+              }}>
+                © 2025 Treasure Coast Scavengers Inc. All rights reserved.
+              </p>
+            </div>
+
+            {/* Social Media Follow */}
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.5rem',
+              alignItems: 'flex-end',
+              flexShrink: 0
+            }}>
+              {/* Instagram Follow */}
+              <motion.a
+                href="https://instagram.com/treasurecoastscavengers"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ 
+                  scale: 1.05,
+                  color: '#10B6C6'
+                }}
+                whileTap={{ scale: 0.95 }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  textDecoration: 'none',
+                  fontSize: '0.875rem',
+                  transition: 'all 0.3s ease',
+                  padding: '0.25rem 0'
+                }}
+              >
+                <Instagram size={16} />
+                Follow us
+              </motion.a>
+
+              {/* Facebook Follow */}
+              <motion.a
+                href="https://www.facebook.com/TreasureCoastScavengers/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ 
+                  scale: 1.05,
+                  color: '#10B6C6'
+                }}
+                whileTap={{ scale: 0.95 }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  textDecoration: 'none',
+                  fontSize: '0.875rem',
+                  transition: 'all 0.3s ease',
+                  padding: '0.25rem 0'
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Follow us
+              </motion.a>
+            </div>
+          </div>
+        </div>
+      </motion.section>
       </div>
     </div>
   );

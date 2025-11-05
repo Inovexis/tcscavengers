@@ -1234,8 +1234,8 @@ export default function HomePage() {
                 marginTop: '3rem'
               }}
             >
-              <motion.button
-                onClick={() => window.location.href = '/events'}
+            <motion.button
+              onClick={() => window.location.href = '/events'}
                 whileHover={{ 
                   scale: 1.03, 
                   boxShadow: '0 20px 40px rgba(16, 182, 198, 0.4)',
@@ -1243,47 +1243,47 @@ export default function HomePage() {
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
                 whileTap={{ scale: 0.98 }}
-                style={{
-                  background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
-                  color: 'white',
+              style={{
+                background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
+                color: 'white',
                   border: 'none',
                   padding: '1.25rem 3.5rem',
                   borderRadius: '10px',
-                  fontSize: '1.1rem',
-                  fontWeight: '600',
-                  cursor: 'pointer',
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                cursor: 'pointer',
                   boxShadow: '0 12px 30px rgba(16, 182, 198, 0.25)',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   position: 'relative',
                   overflow: 'hidden',
-                  display: 'flex',
-                  alignItems: 'center',
+                display: 'flex',
+                alignItems: 'center',
                   justifyContent: 'center',
-                  gap: '0.75rem',
+                gap: '0.75rem',
                   letterSpacing: '0.01em'
-                }}
-              >
-                <motion.div
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: '-100%',
-                    width: '100%',
-                    height: '100%',
+              }}
+            >
+              <motion.div
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: '-100%',
+                  width: '100%',
+                  height: '100%',
                     background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent)'
-                  }}
+                }}
                   whileHover={{ left: '100%' }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
-                />
+              />
                 View Our Events
-                <motion.span
+              <motion.span
                   initial={{ x: 0 }}
                   whileHover={{ x: 4 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                >
-                  →
-                </motion.span>
-              </motion.button>
+              >
+                →
+              </motion.span>
+            </motion.button>
             </motion.div>
           </div>
         </section>
@@ -1321,7 +1321,7 @@ export default function HomePage() {
                 letterSpacing: '-0.02em',
                 cursor: 'default'
               }}>
-                Join Our Mission
+                Fuel the Adventure
               </h2>
               
               <div style={{
@@ -1352,24 +1352,48 @@ export default function HomePage() {
                 overflow: 'hidden'
               }}
             >
-              {/* Decorative background elements */}
+              {/* Decorative corner half-circles - 4 colors from What Drives Us */}
+              {/* Top Left - Love in Action (Coral) */}
               <div style={{
                 position: 'absolute',
-                top: '-50px',
-                right: '-50px',
-                width: '120px',
-                height: '120px',
-                background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
+                top: '-35px',
+                left: '-35px',
+                width: '70px',
+                height: '70px',
+                background: '#FF6A4A',
                 borderRadius: '50%',
                 opacity: 0.1
               }} />
+              {/* Top Right - Community Over Everything (Teal) */}
               <div style={{
                 position: 'absolute',
-                bottom: '-30px',
-                left: '-30px',
-                width: '80px',
-                height: '80px',
-                background: 'linear-gradient(135deg, #FF6A4A, #FDBA2D)',
+                top: '-35px',
+                right: '-35px',
+                width: '70px',
+                height: '70px',
+                background: '#10B6C6',
+                borderRadius: '50%',
+                opacity: 0.1
+              }} />
+              {/* Bottom Left - Joy in the Journey (Gold) */}
+              <div style={{
+                position: 'absolute',
+                bottom: '-35px',
+                left: '-35px',
+                width: '70px',
+                height: '70px',
+                background: '#FDBA2D',
+                borderRadius: '50%',
+                opacity: 0.1
+              }} />
+              {/* Bottom Right - Local Roots, Lasting Impact (Warmer Orange) */}
+              <div style={{
+                position: 'absolute',
+                bottom: '-35px',
+                right: '-35px',
+                width: '70px',
+                height: '70px',
+                background: '#FF8533',
                 borderRadius: '50%',
                 opacity: 0.1
               }} />
@@ -1379,9 +1403,10 @@ export default function HomePage() {
                 fontWeight: '700',
                 color: 'white',
                 marginBottom: '2rem',
-                textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
+                textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
+                cursor: 'default'
               }}>
-                Every smile, every discovery, every act of kindness starts with people like you.
+                Every smile, every discovery, and every act of kindness begins with people like you.
               </h3>
 
               <div style={{
@@ -1395,7 +1420,7 @@ export default function HomePage() {
                   lineHeight: 1.6,
                   cursor: 'default'
                 }}>
-                  Join us as we spread love, adventure, and connection across Florida's Treasure Coast.
+                  Join us as we create adventures that connect people, celebrate community spirit, and give back across Florida's Treasure Coast.
                 </p>
 
                 <p style={{
@@ -1406,7 +1431,7 @@ export default function HomePage() {
                   fontStyle: 'italic',
                   cursor: 'default'
                 }}>
-                  Together, we're building a community where every adventure creates lasting memories and meaningful connections.
+                  Together we're building lasting memories and meaningful connections through every event.
                 </p>
               </div>
 
@@ -1476,6 +1501,129 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
+
+        {/* Footer Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          style={{
+            position: 'relative',
+            zIndex: 2,
+            padding: '1.5rem 0',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center'
+          }}
+        >
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.08)',
+            backdropFilter: 'blur(20px)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            borderRadius: '16px',
+            padding: '1rem 3rem',
+            maxWidth: '900px',
+            width: '90%',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
+          }}>
+            {/* Legal Information with Social Links */}
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              alignItems: 'center',
+              gap: '2rem',
+              flexWrap: 'wrap'
+            }}>
+              {/* Centered Text */}
+              <div style={{ 
+                flex: '1', 
+                textAlign: 'center',
+                minWidth: '200px'
+              }}>
+                <p style={{
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  fontSize: '0.875rem',
+                  margin: '0 0 0.25rem 0',
+                  lineHeight: 1.4,
+                  fontWeight: '500',
+                  cursor: 'default'
+                }}>
+                  Treasure Coast Scavengers Inc. is a nonprofit organization with 501(c)(3) status pending IRS approval.
+                </p>
+                <p style={{
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  fontSize: '0.75rem',
+                  margin: 0,
+                  lineHeight: 1.3,
+                  cursor: 'default'
+                }}>
+                  © 2025 Treasure Coast Scavengers Inc. All rights reserved.
+                </p>
+              </div>
+
+              {/* Social Media Follow */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.5rem',
+                alignItems: 'flex-end',
+                flexShrink: 0
+              }}>
+                {/* Instagram Follow */}
+                <motion.a
+                  href="https://instagram.com/treasurecoastscavengers"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ 
+                    scale: 1.05,
+                    color: '#10B6C6'
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    color: 'rgba(255, 255, 255, 0.7)',
+                    textDecoration: 'none',
+                    fontSize: '0.875rem',
+                    transition: 'all 0.3s ease',
+                    padding: '0.25rem 0'
+                  }}
+                >
+                  <Instagram size={16} />
+                  Follow us
+                </motion.a>
+
+                {/* Facebook Follow */}
+                <motion.a
+                  href="https://www.facebook.com/TreasureCoastScavengers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ 
+                    scale: 1.05,
+                    color: '#10B6C6'
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    color: 'rgba(255, 255, 255, 0.7)',
+                    textDecoration: 'none',
+                    fontSize: '0.875rem',
+                    transition: 'all 0.3s ease',
+                    padding: '0.25rem 0'
+                  }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  Follow us
+                </motion.a>
+              </div>
+            </div>
+          </div>
+        </motion.section>
       </div>
     </div>
   );
