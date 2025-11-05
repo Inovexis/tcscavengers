@@ -133,14 +133,35 @@ export default function HomePage() {
         flex: 1
       }}>
         {/* Cinematic Hero Section */}
-        <section key={`hero-${animationKey}`} style={{
+        <style dangerouslySetInnerHTML={{__html: `
+          @media (max-width: 768px) {
+            .hero-section {
+              padding-top: 10rem !important;
+            }
+          }
+          @media (max-width: 480px) {
+            .hero-section {
+              padding-top: 8rem !important;
+            }
+            .hero-title {
+              font-size: 2.25rem !important;
+            }
+            .hero-title-gradient {
+              font-size: 2.25rem !important;
+            }
+            .hero-subtitle {
+              font-size: 1.25rem !important;
+            }
+          }
+        `}} />
+        <section key={`hero-${animationKey}`} className="hero-section" style={{
           position: 'relative',
           minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
-          paddingTop: 'clamp(8rem, 15vw, 12rem)',
+          paddingTop: '12rem',
           paddingBottom: '4rem',
           width: '100%',
           zIndex: 10
@@ -158,12 +179,13 @@ export default function HomePage() {
           }}>
             {/* Main Headline with Enhanced Typography */}
             <motion.h1
+              className="hero-title"
               key={`hero-title-${animationKey}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
               style={{
-                fontSize: 'clamp(1.6rem, 4vw, 3.5rem)',
+                fontSize: '3rem',
                 fontWeight: 'bold',
                 color: 'white',
                 marginBottom: '1.5rem',
@@ -188,7 +210,7 @@ export default function HomePage() {
               }}>
                 Adventure With Purpose.
               </span>
-              <span style={{ 
+              <span className="hero-title-gradient" style={{ 
                 background: 'linear-gradient(135deg, #FDBA2D 0%, #FF6A4A 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -196,8 +218,7 @@ export default function HomePage() {
                 display: 'block',
                 textAlign: 'center',
                 width: '100%',
-                whiteSpace: 'nowrap',
-                fontSize: 'clamp(1.2rem, 3.5vw, 3.2rem)',
+                fontSize: '3rem',
                 lineHeight: 1.2,
                 padding: '0 1rem',
                 cursor: 'default'
@@ -208,12 +229,13 @@ export default function HomePage() {
 
             {/* Enhanced Subtitle */}
             <motion.p
+              className="hero-subtitle"
               key={`hero-subtitle-${animationKey}`}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
               style={{
-                fontSize: 'clamp(1.25rem, 2.8vw, 1.7rem)',
+                fontSize: '1.6rem',
                 color: 'rgba(255, 255, 255, 0.95)',
                 marginBottom: '3rem',
                 lineHeight: 1.5,
@@ -328,22 +350,38 @@ export default function HomePage() {
             </motion.div>
 
             {/* Enhanced Stats Section */}
+            <style dangerouslySetInnerHTML={{__html: `
+              .stats-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 2rem !important;
+              }
+              @media (max-width: 768px) {
+                .stats-grid {
+                  gap: 1.5rem !important;
+                }
+              }
+              @media (max-width: 640px) {
+                .stats-grid {
+                  grid-template-columns: 1fr !important;
+                  gap: 1.5rem !important;
+                }
+              }
+            `}} />
             <motion.div
+              className="stats-grid"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                gap: '2rem',
                 maxWidth: '800px',
                 margin: '0 auto'
               }}
             >
               {[
-                { number: '20', label: 'Treasures Found', icon: Heart, color: '#FF6A4A' },
-                { number: '1,200+', label: 'Adventurers', icon: Users, color: '#10B6C6' },
-                { number: '12', label: 'Events Hosted', icon: Trophy, color: '#FDBA2D' }
+                { number: '23', label: 'Treasures Found', icon: Heart, color: '#FF6A4A' },
+                { number: '1,600+', label: 'Adventurers', icon: Users, color: '#10B6C6' },
+                { number: '14', label: 'Events Hosted', icon: Trophy, color: '#FDBA2D' }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -493,7 +531,7 @@ export default function HomePage() {
                   maxWidth: '750px',
                   margin: '0 auto'
                 }}>
-                  Every hunt we create is meant to inspire discovery, foster genuine connection, and spread kindness through the joy of giving back.
+                  As a nonprofit organization, every hunt we create is meant to inspire discovery, foster genuine connection, and spread kindness through the joy of giving back.
                 </p>
               </div>
             </motion.div>
