@@ -1,22 +1,31 @@
 'use client';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Users, Heart, Trophy, Compass, Instagram, HeartHandshake, Users2, Sparkles, MapPin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Logo from '@/components/Logo';
 import TreasureHuntPreview from '@/components/TreasureHuntPreview';
 // ResponsiveNav is handled in the root layout
+=======
+import { Users, Heart, Trophy, Instagram, HeartHandshake, Users2, Sparkles, MapPin } from 'lucide-react';
+import { useEffect, useState } from 'react';
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
 
 export default function HomePage() {
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
+<<<<<<< HEAD
     // Force re-animation when component mounts
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
     setAnimationKey(prev => prev + 1);
   }, []);
 
   const handleJoinHunt = () => {
+<<<<<<< HEAD
     // Scroll to events section or redirect to events page
     window.location.href = '/events';
   };
@@ -35,6 +44,28 @@ export default function HomePage() {
         width: '100%',
         maxWidth: '100vw',
         display: 'flex',
+=======
+    if (typeof window !== 'undefined') {
+      window.location.href = '/events';
+    }
+  };
+
+  const handleLearnMore = () => {
+    if (typeof window !== 'undefined') {
+      window.location.href = '/about';
+    }
+  };
+
+  return (
+    <div style={{
+      backgroundColor: '#0B2341',
+      fontFamily: 'Inter, sans-serif',
+      position: 'relative',
+      overflowX: 'hidden',
+      width: '100%',
+      maxWidth: '100vw',
+      display: 'flex',
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
       flexDirection: 'column'
     }}>
       <style dangerouslySetInnerHTML={{__html: `
@@ -67,7 +98,11 @@ export default function HomePage() {
           }
         }
       `}} />
+<<<<<<< HEAD
       {/* Consistent Cinematic Background for Entire Page */}
+=======
+      {/* Background */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
       <div style={{
         position: 'absolute',
         top: 0,
@@ -85,7 +120,10 @@ export default function HomePage() {
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat'
       }}>
+<<<<<<< HEAD
         {/* Subtle Treasure Coast Depth Layers */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
         <div style={{
           position: 'absolute',
           top: '15%',
@@ -120,9 +158,12 @@ export default function HomePage() {
         }} />
       </div>
 
+<<<<<<< HEAD
       {/* Responsive Navigation */}
       {/* ResponsiveNav is handled in the root layout */}
 
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
       {/* Main Content Container */}
       <div style={{
         position: 'relative',
@@ -143,9 +184,13 @@ export default function HomePage() {
             .hero-section {
               padding-top: 8rem !important;
             }
+<<<<<<< HEAD
             .hero-title {
               font-size: 2.25rem !important;
             }
+=======
+            .hero-title,
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             .hero-title-gradient {
               font-size: 2.25rem !important;
             }
@@ -177,7 +222,10 @@ export default function HomePage() {
             boxSizing: 'border-box',
             overflow: 'hidden'
           }}>
+<<<<<<< HEAD
             {/* Main Headline with Enhanced Typography */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <motion.h1
               className="hero-title"
               key={`hero-title-${animationKey}`}
@@ -227,7 +275,10 @@ export default function HomePage() {
               </span>
             </motion.h1>
 
+<<<<<<< HEAD
             {/* Enhanced Subtitle */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <motion.p
               className="hero-subtitle"
               key={`hero-subtitle-${animationKey}`}
@@ -250,7 +301,10 @@ export default function HomePage() {
               We bring our community together through free, family-friendly scavenger hunts that inspire connection, discovery, and giving across Florida's Treasure Coast.
             </motion.p>
 
+<<<<<<< HEAD
             {/* Enhanced CTA Buttons */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <motion.div
               key={`hero-buttons-${animationKey}`}
               initial={{ opacity: 0, y: 15 }}
@@ -349,7 +403,11 @@ export default function HomePage() {
               </motion.button>
             </motion.div>
 
+<<<<<<< HEAD
             {/* Enhanced Stats Section */}
+=======
+            {/* Stats Section */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <style dangerouslySetInnerHTML={{__html: `
               .stats-grid {
                 grid-template-columns: repeat(3, 1fr) !important;
@@ -399,18 +457,31 @@ export default function HomePage() {
                     height: '60px',
                     borderRadius: '50%',
                     background: `linear-gradient(135deg, ${stat.color}, ${stat.color}80)`,
+<<<<<<< HEAD
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
+=======
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                     margin: '0 auto 1rem auto',
                     boxShadow: `0 8px 25px ${stat.color}40`
                   }}>
                     <stat.icon size={28} color="white" />
                   </div>
+<<<<<<< HEAD
                     <div style={{
                     fontSize: '2rem',
                     fontWeight: 'bold',
                       color: 'white',
+=======
+                  <div style={{
+                    fontSize: '2rem',
+                    fontWeight: 'bold',
+                    color: 'white',
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                     marginBottom: '0.5rem'
                   }}>
                     {stat.number}
@@ -428,7 +499,11 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Clean Mission Statement */}
+=======
+        {/* Our Mission Section */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
         <section style={{
           position: 'relative',
           zIndex: 2,
@@ -442,7 +517,10 @@ export default function HomePage() {
             width: '100%',
             boxSizing: 'border-box'
           }}>
+<<<<<<< HEAD
             {/* Mission Header */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -474,7 +552,10 @@ export default function HomePage() {
               }} />
             </motion.div>
 
+<<<<<<< HEAD
             {/* Mission Content - Sophisticated & Refined */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -538,7 +619,11 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* What Makes Us Different - Values Section */}
+=======
+        {/* What Drives Us Section */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
         <section style={{
           position: 'relative',
           zIndex: 2,
@@ -584,7 +669,11 @@ export default function HomePage() {
             </motion.div>
 
 
+<<<<<<< HEAD
             {/* Ultra-Fast Values Flow */}
+=======
+            {/* Values Content - Grid Layout */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <div style={{
               position: 'relative',
               width: '100%',
@@ -592,7 +681,10 @@ export default function HomePage() {
               margin: '0 auto',
               padding: '0 2rem'
             }}>
+<<<<<<< HEAD
               {/* Values Content - Grid Layout - 2x2 Grid */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <div className="what-drives-us-grid" style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(2, 1fr)',
@@ -950,7 +1042,11 @@ export default function HomePage() {
                   </motion.div>
               </div>
               
+<<<<<<< HEAD
               {/* Learn More About Us CTA Button */}
+=======
+              {/* Learn More About Us Button */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1071,6 +1167,7 @@ export default function HomePage() {
               margin: '0 auto 4rem auto',
               width: '100%'
             }}>
+<<<<<<< HEAD
               {/* Adventure Teaser Card 1 - Downtown Mysteries */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1078,6 +1175,15 @@ export default function HomePage() {
                 transition={{ duration: 0.3, delay: 0, ease: "easeOut" }}
               style={{
                 display: 'flex',
+=======
+              {/* Downtown Mysteries */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0, ease: "easeOut" }}
+                style={{
+                  display: 'flex',
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                   flexDirection: 'column',
                   alignItems: 'center',
                   gap: '1.5rem',
@@ -1099,6 +1205,7 @@ export default function HomePage() {
                 }}
               >
                 <div style={{ flex: 1, textAlign: 'center' }}>
+<<<<<<< HEAD
                 <h3 style={{
                     fontSize: '1.4rem',
                     fontWeight: 'bold',
@@ -1122,6 +1229,31 @@ export default function HomePage() {
               </motion.div>
 
               {/* Adventure Teaser Card 2 - Beach Adventures */}
+=======
+                  <h3 style={{
+                    fontSize: '1.4rem',
+                    fontWeight: 'bold',
+                    color: 'white',
+                    marginBottom: '0.5rem',
+                    textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+                    cursor: 'default'
+                  }}>
+                    Downtown Mysteries
+                  </h3>
+                  <p style={{
+                    color: 'rgba(255, 255, 255, 0.9)',
+                    lineHeight: 1.5,
+                    fontSize: '0.95rem',
+                    margin: 0,
+                    cursor: 'default'
+                  }}>
+                    Uncover the secrets hidden in our historic downtown streets
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Beach Adventures */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1149,6 +1281,7 @@ export default function HomePage() {
                 }}
               >
                 <div style={{ flex: 1, textAlign: 'center' }}>
+<<<<<<< HEAD
                 <h3 style={{
                     fontSize: '1.4rem',
                     fontWeight: 'bold',
@@ -1172,6 +1305,31 @@ export default function HomePage() {
               </motion.div>
 
               {/* Adventure Teaser Card 3 - Special Moments */}
+=======
+                  <h3 style={{
+                    fontSize: '1.4rem',
+                    fontWeight: 'bold',
+                    color: 'white',
+                    marginBottom: '0.5rem',
+                    textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+                    cursor: 'default'
+                  }}>
+                    Beach Adventures
+                  </h3>
+                  <p style={{
+                    color: 'rgba(255, 255, 255, 0.9)',
+                    lineHeight: 1.5,
+                    fontSize: '0.95rem',
+                    margin: 0,
+                    cursor: 'default'
+                  }}>
+                    Discover what treasures await along our beautiful coastline
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Special Moments */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <motion.div
                 className="special-moments-card"
                 initial={{ opacity: 0, y: 20 }}
@@ -1200,6 +1358,7 @@ export default function HomePage() {
                 }}
               >
                 <div style={{ flex: 1, textAlign: 'center' }}>
+<<<<<<< HEAD
                 <h3 style={{
                     fontSize: '1.4rem',
                     fontWeight: 'bold',
@@ -1219,11 +1378,36 @@ export default function HomePage() {
                 }}>
                   Join us for milestone celebrations and community highlights
                 </p>
+=======
+                  <h3 style={{
+                    fontSize: '1.4rem',
+                    fontWeight: 'bold',
+                    color: 'white',
+                    marginBottom: '0.5rem',
+                    textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+                    cursor: 'default'
+                  }}>
+                    Special Moments
+                  </h3>
+                  <p style={{
+                    color: 'rgba(255, 255, 255, 0.9)',
+                    lineHeight: 1.5,
+                    fontSize: '0.95rem',
+                    margin: 0,
+                    cursor: 'default'
+                  }}>
+                    Join us for milestone celebrations and community highlights
+                  </p>
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                 </div>
               </motion.div>
             </div>
 
+<<<<<<< HEAD
             {/* View Our Events CTA Button */}
+=======
+            {/* View Our Events Button */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1234,8 +1418,17 @@ export default function HomePage() {
                 marginTop: '3rem'
               }}
             >
+<<<<<<< HEAD
             <motion.button
               onClick={() => window.location.href = '/events'}
+=======
+              <motion.button
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.location.href = '/events';
+                  }
+                }}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                 whileHover={{ 
                   scale: 1.03, 
                   boxShadow: '0 20px 40px rgba(16, 182, 198, 0.4)',
@@ -1243,6 +1436,7 @@ export default function HomePage() {
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
                 whileTap={{ scale: 0.98 }}
+<<<<<<< HEAD
               style={{
                 background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
                 color: 'white',
@@ -1252,10 +1446,22 @@ export default function HomePage() {
                 fontSize: '1.1rem',
                 fontWeight: '600',
                 cursor: 'pointer',
+=======
+                style={{
+                  background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
+                  color: 'white',
+                  border: 'none',
+                  padding: '1.25rem 3.5rem',
+                  borderRadius: '10px',
+                  fontSize: '1.1rem',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                   boxShadow: '0 12px 30px rgba(16, 182, 198, 0.25)',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   position: 'relative',
                   overflow: 'hidden',
+<<<<<<< HEAD
                 display: 'flex',
                 alignItems: 'center',
                   justifyContent: 'center',
@@ -1284,11 +1490,45 @@ export default function HomePage() {
                 →
               </motion.span>
             </motion.button>
+=======
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.75rem',
+                  letterSpacing: '0.01em'
+                }}
+              >
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: '-100%',
+                    width: '100%',
+                    height: '100%',
+                    background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent)'
+                  }}
+                  whileHover={{ left: '100%' }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                />
+                View Our Events
+                <motion.span
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  →
+                </motion.span>
+              </motion.button>
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Closing Call-to-Action Section */}
+=======
+        {/* Fuel the Adventure Section */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
         <section style={{
           position: 'relative',
           zIndex: 2,
@@ -1352,8 +1592,12 @@ export default function HomePage() {
                 overflow: 'hidden'
               }}
             >
+<<<<<<< HEAD
               {/* Decorative corner half-circles - 4 colors from What Drives Us */}
               {/* Top Left - Love in Action (Coral) */}
+=======
+              {/* Decorative corner circles - 4 colors from What Drives Us */}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <div style={{
                 position: 'absolute',
                 top: '-35px',
@@ -1364,7 +1608,10 @@ export default function HomePage() {
                 borderRadius: '50%',
                 opacity: 0.1
               }} />
+<<<<<<< HEAD
               {/* Top Right - Community Over Everything (Teal) */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <div style={{
                 position: 'absolute',
                 top: '-35px',
@@ -1375,7 +1622,10 @@ export default function HomePage() {
                 borderRadius: '50%',
                 opacity: 0.1
               }} />
+<<<<<<< HEAD
               {/* Bottom Left - Joy in the Journey (Gold) */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <div style={{
                 position: 'absolute',
                 bottom: '-35px',
@@ -1386,7 +1636,10 @@ export default function HomePage() {
                 borderRadius: '50%',
                 opacity: 0.1
               }} />
+<<<<<<< HEAD
               {/* Bottom Right - Local Roots, Lasting Impact (Warmer Orange) */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <div style={{
                 position: 'absolute',
                 bottom: '-35px',
@@ -1436,7 +1689,15 @@ export default function HomePage() {
               </div>
 
               <motion.button
+<<<<<<< HEAD
                 onClick={() => window.location.href = '/donate'}
+=======
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.location.href = '/donate';
+                  }
+                }}
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                 whileHover={{ 
                   scale: 1.08,
                   boxShadow: '0 25px 50px rgba(16, 182, 198, 0.5)',
@@ -1526,7 +1787,10 @@ export default function HomePage() {
             width: '90%',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
           }}>
+<<<<<<< HEAD
             {/* Legal Information with Social Links */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
             <div style={{ 
               display: 'flex', 
               justifyContent: 'space-between', 
@@ -1534,7 +1798,10 @@ export default function HomePage() {
               gap: '2rem',
               flexWrap: 'wrap'
             }}>
+<<<<<<< HEAD
               {/* Centered Text */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <div style={{ 
                 flex: '1', 
                 textAlign: 'center',
@@ -1561,7 +1828,10 @@ export default function HomePage() {
                 </p>
               </div>
 
+<<<<<<< HEAD
               {/* Social Media Follow */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
               <div style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -1569,7 +1839,10 @@ export default function HomePage() {
                 alignItems: 'flex-end',
                 flexShrink: 0
               }}>
+<<<<<<< HEAD
                 {/* Instagram Follow */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                 <motion.a
                   href="https://instagram.com/treasurecoastscavengers"
                   target="_blank"
@@ -1594,7 +1867,10 @@ export default function HomePage() {
                   Follow us
                 </motion.a>
 
+<<<<<<< HEAD
                 {/* Facebook Follow */}
+=======
+>>>>>>> 1e739a9 (Version 7 – finished desktop main page)
                 <motion.a
                   href="https://www.facebook.com/TreasureCoastScavengers/"
                   target="_blank"
