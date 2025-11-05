@@ -436,7 +436,7 @@ export default function HomePage() {
               }} />
             </motion.div>
 
-            {/* Mission Content - Clean and Centered */}
+            {/* Mission Content - Sophisticated & Refined */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -445,7 +445,7 @@ export default function HomePage() {
                 background: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
                 borderRadius: '24px',
-                padding: 'clamp(2rem, 5vw, 5rem) clamp(1.5rem, 4vw, 4rem)',
+                padding: 'clamp(3rem, 6vw, 5.5rem) clamp(2rem, 4vw, 4.5rem)',
                 textAlign: 'center',
                 position: 'relative',
                 backdropFilter: 'blur(20px)',
@@ -454,90 +454,48 @@ export default function HomePage() {
                 margin: '0 auto'
               }}
             >
-              <h3 style={{
-                fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)',
-                fontWeight: '700',
-                color: 'white',
-                marginBottom: '2rem',
-                lineHeight: 1.2,
-                maxWidth: '800px',
-                margin: '0 auto 2rem auto',
-                textShadow: '0 4px 20px rgba(0, 0, 0, 0.4)'
-              }}>
-                Adventure has the power to bring people together.
-              </h3>
-
               <div style={{
                 maxWidth: '800px',
                 margin: '0 auto'
               }}>
                 <p style={{
-                  fontSize: 'clamp(1.3rem, 2.5vw, 1.6rem)',
-                  color: 'rgba(255, 255, 255, 0.95)',
+                  fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+                  color: 'rgba(255, 255, 255, 0.98)',
                   lineHeight: 1.6,
-                  marginBottom: '2rem',
-                  fontWeight: '500',
-                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
-                  cursor: 'default'
+                  marginBottom: '2.5rem',
+                  fontWeight: '400',
+                  textShadow: '0 2px 12px rgba(0, 0, 0, 0.3)',
+                  cursor: 'default',
+                  letterSpacing: '-0.01em',
+                  maxWidth: '750px',
+                  margin: '0 auto 2.5rem auto'
                 }}>
-                  We believe every scavenger hunt can transform strangers into friends, turning simple adventures into lasting memories that strengthen our community.
+                  Our mission is to strengthen the Treasure Coast through shared adventures that bring people together, celebrate local stories, and build lasting connections between communities and the places they call home.
                 </p>
+
+                <div style={{
+                  width: '100px',
+                  height: '4px',
+                  background: 'linear-gradient(90deg, #10B6C6, #FF6A4A)',
+                  margin: '0 auto 2.5rem auto',
+                  borderRadius: '2px',
+                  opacity: 0.6
+                }} />
 
                 <p style={{
-                  fontSize: 'clamp(1.1rem, 2.2vw, 1.3rem)',
-                  color: 'rgba(255, 255, 255, 0.85)',
-                  lineHeight: 1.5,
-                  fontStyle: 'italic',
-                  marginBottom: '4rem',
-                  fontWeight: '400',
-                  cursor: 'default'
+                  fontSize: 'clamp(1.1rem, 2.2vw, 1.35rem)',
+                  color: 'rgba(255, 255, 255, 0.88)',
+                  lineHeight: 1.7,
+                  fontWeight: '300',
+                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.25)',
+                  cursor: 'default',
+                  fontStyle: 'normal',
+                  maxWidth: '750px',
+                  margin: '0 auto'
                 }}>
-                  Through creative challenges and shared discoveries, we're building a Treasure Coast where every adventure creates connection.
+                  Every hunt we create is meant to inspire discovery, foster genuine connection, and spread kindness through the joy of giving back.
                 </p>
               </div>
-
-              {/* Secondary CTA - Simpler Style */}
-              <motion.button
-                onClick={handleLearnMore}
-                whileHover={{ scale: 1.05, boxShadow: '0 15px 35px rgba(16, 182, 198, 0.4)', y: -2 }}
-                whileTap={{ scale: 0.97 }}
-                style={{
-                  background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
-                  color: 'white',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  padding: '1.2rem 3rem',
-                  borderRadius: '12px',
-                  fontSize: '1.1rem',
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  boxShadow: '0 10px 25px rgba(16, 182, 198, 0.3)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.75rem',
-                  margin: '0 auto',
-                  transition: 'all 0.3s ease', position: 'relative', overflow: 'hidden'
-                }}
-              >
-                Learn More About Us
-                <motion.div
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: '-100%',
-                    width: '100%',
-                    height: '100%',
-                    background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)'
-                  }}
-                  animate={{ left: '100%' }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                />
-                <motion.span
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  →
-                </motion.span>
-              </motion.button>
             </motion.div>
           </div>
         </section>
@@ -602,9 +560,9 @@ export default function HomePage() {
                 gridTemplateColumns: 'repeat(2, 1fr)',
                 gridTemplateRows: 'repeat(2, 1fr)',
                 gap: '2rem',
-                marginBottom: '5rem',
+                marginBottom: '4rem',
                 maxWidth: '1200px',
-                margin: '0 auto 5rem auto',
+                margin: '0 auto 4rem auto',
                 width: '100%',
                 position: 'relative',
                 zIndex: 10,
@@ -738,8 +696,8 @@ export default function HomePage() {
                     }}>
                       <Users2 size={28} color="#10B6C6" />
                     </div>
-                    <div style={{ 
-                      flex: 1, 
+                    <div style={{
+                      flex: 1,
                       textAlign: 'center',
                       display: 'flex',
                       flexDirection: 'column',
@@ -953,6 +911,69 @@ export default function HomePage() {
                     </div>
                   </motion.div>
               </div>
+              
+              {/* Learn More About Us CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginTop: '3rem'
+                }}
+              >
+                <motion.button
+                  onClick={handleLearnMore}
+                  whileHover={{ 
+                    scale: 1.03, 
+                    boxShadow: '0 20px 40px rgba(16, 182, 198, 0.4)',
+                    y: -3,
+                    transition: { duration: 0.3, ease: "easeOut" }
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
+                    color: 'white',
+                    border: 'none',
+                    padding: '1.25rem 3.5rem',
+                    borderRadius: '10px',
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    boxShadow: '0 12px 30px rgba(16, 182, 198, 0.25)',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.75rem',
+                    letterSpacing: '0.01em'
+                  }}
+                >
+                  <motion.div
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: '-100%',
+                      width: '100%',
+                      height: '100%',
+                      background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent)'
+                    }}
+                    whileHover={{ left: '100%' }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                  />
+                  Learn More About Us
+                  <motion.span
+                    initial={{ x: 0 }}
+                    whileHover={{ x: 4 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                  >
+                    →
+                  </motion.span>
+                </motion.button>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -1013,12 +1034,12 @@ export default function HomePage() {
               width: '100%'
             }}>
               {/* Adventure Teaser Card 1 - Downtown Mysteries */}
-              <motion.div
+            <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0, ease: "easeOut" }}
-                style={{
-                  display: 'flex',
+              style={{
+                display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
                   gap: '1.5rem',
@@ -1040,25 +1061,25 @@ export default function HomePage() {
                 }}
               >
                 <div style={{ flex: 1, textAlign: 'center' }}>
-                  <h3 style={{
+                <h3 style={{
                     fontSize: '1.4rem',
                     fontWeight: 'bold',
-                    color: 'white',
+                  color: 'white',
                     marginBottom: '0.5rem',
                     textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
                     cursor: 'default'
-                  }}>
+                }}>
                     Downtown Mysteries
-                  </h3>
-                  <p style={{
-                    color: 'rgba(255, 255, 255, 0.9)',
-                    lineHeight: 1.5,
+                </h3>
+                <p style={{
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  lineHeight: 1.5,
                     fontSize: '0.95rem',
                     margin: 0,
                     cursor: 'default'
-                  }}>
+                }}>
                     Uncover the secrets hidden in our historic downtown streets
-                  </p>
+                </p>
                 </div>
               </motion.div>
 
@@ -1090,25 +1111,25 @@ export default function HomePage() {
                 }}
               >
                 <div style={{ flex: 1, textAlign: 'center' }}>
-                  <h3 style={{
+                <h3 style={{
                     fontSize: '1.4rem',
                     fontWeight: 'bold',
-                    color: 'white',
+                  color: 'white',
                     marginBottom: '0.5rem',
                     textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
                     cursor: 'default'
-                  }}>
+                }}>
                     Beach Adventures
-                  </h3>
-                  <p style={{
-                    color: 'rgba(255, 255, 255, 0.9)',
-                    lineHeight: 1.5,
+                </h3>
+                <p style={{
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  lineHeight: 1.5,
                     fontSize: '0.95rem',
                     margin: 0,
                     cursor: 'default'
-                  }}>
+                }}>
                     Discover what treasures await along our beautiful coastline
-                  </p>
+                </p>
                 </div>
               </motion.div>
 
@@ -1141,70 +1162,91 @@ export default function HomePage() {
                 }}
               >
                 <div style={{ flex: 1, textAlign: 'center' }}>
-                  <h3 style={{
+                <h3 style={{
                     fontSize: '1.4rem',
                     fontWeight: 'bold',
-                    color: 'white',
+                  color: 'white',
                     marginBottom: '0.5rem',
                     textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
                     cursor: 'default'
-                  }}>
-                    Special Moments
-                  </h3>
-                  <p style={{
-                    color: 'rgba(255, 255, 255, 0.9)',
-                    lineHeight: 1.5,
+                }}>
+                  Special Moments
+                </h3>
+                <p style={{
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  lineHeight: 1.5,
                     fontSize: '0.95rem',
                     margin: 0,
                     cursor: 'default'
-                  }}>
-                    Join us for milestone celebrations and community highlights
-                  </p>
+                }}>
+                  Join us for milestone celebrations and community highlights
+                </p>
                 </div>
               </motion.div>
             </div>
 
-            <motion.button
-              onClick={() => window.location.href = '/events'}
-              whileHover={{ scale: 1.05, boxShadow: '0 15px 35px rgba(16, 182, 198, 0.4)', y: -2 }}
-              whileTap={{ scale: 0.97 }}
+            {/* View Our Events CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               style={{
-                background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
-                color: 'white',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                padding: '1.2rem 3rem',
-                borderRadius: '12px',
-                fontSize: '1.1rem',
-                fontWeight: '600',
-                cursor: 'pointer',
-                boxShadow: '0 10px 25px rgba(16, 182, 198, 0.3)',
-                transition: 'all 0.3s ease', position: 'relative', overflow: 'hidden',
                 display: 'flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                margin: '0 auto'
+                justifyContent: 'center',
+                marginTop: '3rem'
               }}
             >
-              View Our Events
-              <motion.div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: '-100%',
-                  width: '100%',
-                  height: '100%',
-                  background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)'
+              <motion.button
+                onClick={() => window.location.href = '/events'}
+                whileHover={{ 
+                  scale: 1.03, 
+                  boxShadow: '0 20px 40px rgba(16, 182, 198, 0.4)',
+                  y: -3,
+                  transition: { duration: 0.3, ease: "easeOut" }
                 }}
-                animate={{ left: '100%' }}
-                transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
-              />
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
+                whileTap={{ scale: 0.98 }}
+                style={{
+                  background: 'linear-gradient(135deg, #10B6C6, #0EA5B8)',
+                  color: 'white',
+                  border: 'none',
+                  padding: '1.25rem 3.5rem',
+                  borderRadius: '10px',
+                  fontSize: '1.1rem',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  boxShadow: '0 12px 30px rgba(16, 182, 198, 0.25)',
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.75rem',
+                  letterSpacing: '0.01em'
+                }}
               >
-                →
-              </motion.span>
-            </motion.button>
+                <motion.div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: '-100%',
+                    width: '100%',
+                    height: '100%',
+                    background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent)'
+                  }}
+                  whileHover={{ left: '100%' }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                />
+                View Our Events
+                <motion.span
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  →
+                </motion.span>
+              </motion.button>
+            </motion.div>
           </div>
         </section>
 
